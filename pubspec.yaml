@@ -1,5 +1,5 @@
 name: result_handler
-description: A starting point for Dart libraries or applications.
+description: A simple and powerful library for handling results (successes and failures) in Dart, inspired by Either from functional programming libraries like dartz. This library uses Success and Failure classes to represent outcomes.
 version: 1.0.0
 repository: https://github.com/Mahmoud-Saeed-Mahmoud/result_handler
 homepage: https://mahmoud-saeed-mahmoud.github.io/result_handler/
