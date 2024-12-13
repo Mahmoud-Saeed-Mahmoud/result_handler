@@ -98,7 +98,7 @@ Represents a failed result, holding an error of type `E`.
 
 ## License
 
-This library is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+This library is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for more details.
 
 ## Changelog
 
