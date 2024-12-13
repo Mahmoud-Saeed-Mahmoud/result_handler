@@ -65,7 +65,7 @@ void main() async {
   } catch(e) {
     print("Exception thrown : $e");
   }
-    final resultB = await fetchData();
+  final resultB = await fetchData();
   final bindResult = resultB.bind((data) => Success(data * 50));
   bindResult.when(
     success: (value) => print('Success bind: $value'),
