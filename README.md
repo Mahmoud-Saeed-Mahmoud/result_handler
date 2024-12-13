@@ -15,7 +15,7 @@ A simple and powerful library for handling results (successes and failures) in D
 Here's how to use the library:
 
 ```dart
-import 'package:result_handling/result_handling.dart';
+import 'package:result_handler/result_handler.dart';
 
 Future<Result<int, String>> fetchData() async {
   await Future.delayed(const Duration(seconds: 1)); // Simulate work
