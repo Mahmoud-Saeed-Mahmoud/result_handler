@@ -17,7 +17,7 @@ Here's how to use the library:
 ```dart
 import 'package:result_handler/result_handler.dart';
 
-Future<Result<int, String>> fetchData() async {
+Future<Result<String, int>> fetchData() async {
   await Future.delayed(const Duration(seconds: 1)); // Simulate work
   if (DateTime.now().second % 2 == 0) {
     return Success(42); // Success case
@@ -76,23 +76,23 @@ void main() async {
 
 ## API
 
-### `Result<T, E>` (Abstract Class)
+### `Result<E, T>` (Abstract Class)
 
-Represents the result of an operation, which can be either a `Success<T, E>` or a `Failure<T, E>`.
+Represents the result of an operation, which can be either a `Success<E, T>` or a `Failure<E, T>`.
 
--   `bind<R>(Result<R, E> Function(T value) transform)`:  Binds a function to the `Result`.
--   `flatMap<R>(Result<R, E> Function(T value) transform)`: Similar to map but the transformation returns another Result.
+-   `bind<R>(Result<R, T> Function(T value) transform)`:  Binds a function to the `Result`.
+-   `flatMap<R>(Result<R, T> Function(T value) transform)`: Similar to map but the transformation returns another Result.
 -   `getOrElse(T Function(E error) orElse)`: Returns the value if it's a `Success`, otherwise returns the result of the orElse callback.
 -   `getOrThrow()`: Returns the value if it's a `Success`, otherwise throws the error.
 -   `map<R>(R Function(T value) transform)`: Transforms the value inside a `Success`, otherwise does nothing.
 -   `mapFailure<R>(R Function(E error) transform)`: Transforms the error inside a `Failure`, otherwise does nothing.
 -   `when<R>({required R Function(T data) success, required R Function(E error) failure})`: Executes the `success` callback if it's a `Success` or `failure` if it's a `Failure`.
 
-### `Success<T, E>` (Class)
+### `Success<E, T>` (Class)
 
 Represents a successful result, holding a value of type `T`.
 
-### `Failure<T, E>` (Class)
+### `Failure<E, T>` (Class)
 
 Represents a failed result, holding an error of type `E`.
 
