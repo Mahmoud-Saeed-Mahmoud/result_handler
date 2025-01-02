@@ -26,7 +26,7 @@
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">result_handler</a></li>
     <li><a href="../../result_handler/result_handler-library.html">result_handler.dart</a></li>
-    <li><a href="../../result_handler/Success-class.html">Success<span class="signature">&lt;<wbr><span class="type-parameter">T</span>, <span class="type-parameter">E</span>&gt;</span></a></li>
+    <li><a href="../../result_handler/Success-class.html">Success<span class="signature">&lt;<wbr><span class="type-parameter">E</span>, <span class="type-parameter">T</span>&gt;</span></a></li>
     <li class="self-crumb">map&lt;<wbr><span class="type-parameter">R</span>&gt; method</li>
   </ol>
   <div class="self-name">map</div>
@@ -62,7 +62,7 @@
         <li>@<a href="https://api.dart.dev/stable/3.6.0/dart-core/override-constant.html">override</a></li>
     </ol>
   </div>
-<span class="returntype"><a href="../../result_handler/Result-class.html">Result</a><span class="signature">&lt;<wbr><span class="type-parameter">R</span>, <span class="type-parameter">E</span>&gt;</span></span>
+<span class="returntype"><a href="../../result_handler/Result-class.html">Result</a><span class="signature">&lt;<wbr><span class="type-parameter">E</span>, <span class="type-parameter">R</span>&gt;</span></span>
 <span class="name ">map</span>&lt;<wbr><span class="type-parameter">R</span>&gt;(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="map-param-transform"><span class="type-annotation">R</span> <span class="parameter-name">transform</span>(<ol class="parameter-list single-line"> <li><span class="parameter" id="param-value"><span class="type-annotation">T</span> <span class="parameter-name">value</span></span></li>
 </ol>)</span></li>
 </ol>)
@@ -82,7 +82,8 @@
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">@override
-Result&lt;R, E&gt; map&lt;R&gt;(R Function(T value) transform) {
+Result&lt;E, R&gt; map&lt;R&gt;(R Function(T value) transform) {
+  &#47;&#47;&#47; Changed return type and generic parameter
   return Success(transform(data));
 }</code></pre>
 </section>
@@ -99,7 +100,7 @@ Result&lt;R, E&gt; map&lt;R&gt;(R Function(T value) transform) {
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">result_handler</a></li>
     <li><a href="../../result_handler/result_handler-library.html">result_handler</a></li>
-    <li><a href="../../result_handler/Success-class.html">Success<span class="signature">&lt;<wbr><span class="type-parameter">T</span>, <span class="type-parameter">E</span>&gt;</span></a></li>
+    <li><a href="../../result_handler/Success-class.html">Success<span class="signature">&lt;<wbr><span class="type-parameter">E</span>, <span class="type-parameter">T</span>&gt;</span></a></li>
     <li class="self-crumb">map&lt;<wbr><span class="type-parameter">R</span>&gt; method</li>
 </ol>
 
@@ -112,7 +113,7 @@ Result&lt;R, E&gt; map&lt;R&gt;(R Function(T value) transform) {
 <footer>
   <span class="no-break">
     result_handler
-      1.0.0
+      1.2.0
   </span>
   
 </footer>

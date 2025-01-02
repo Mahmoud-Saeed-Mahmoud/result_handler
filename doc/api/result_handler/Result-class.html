@@ -26,7 +26,7 @@
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../index.html">result_handler</a></li>
     <li><a href="../result_handler/result_handler-library.html">result_handler.dart</a></li>
-    <li class="self-crumb">Result<span class="signature">&lt;<wbr><span class="type-parameter">T</span>, <span class="type-parameter">E</span>&gt;</span> class</li>
+    <li class="self-crumb">Result<span class="signature">&lt;<wbr><span class="type-parameter">E</span>, <span class="type-parameter">T</span>&gt;</span> class</li>
   </ol>
   <div class="self-name">Result</div>
   <form class="search navbar-right" role="search">
@@ -51,7 +51,7 @@
     data-above-sidebar="result_handler&#47;result_handler-library-sidebar.html"
     data-below-sidebar="result_handler&#47;Result-class-sidebar.html">
     <div>
-<h1><span class="kind-class">Result&lt;<wbr><span class="type-parameter">T</span>, <span class="type-parameter">E</span>&gt;</span> class 
+<h1><span class="kind-class">Result&lt;<wbr><span class="type-parameter">E</span>, <span class="type-parameter">T</span>&gt;</span> class 
     <a href="https://dart.dev/language/class-modifiers#abstract" class="feature feature-abstract" title="This type can not be directly constructed.">abstract</a>
  
 </h1></div>
@@ -59,8 +59,8 @@
     
 <section class="desc markdown">
   <p>An abstract class representing the result of an operation, which can either be a <a href="../result_handler/Success-class.html">Success</a> or a <a href="../result_handler/Failure-class.html">Failure</a>.</p>
-<p><code>T</code> is the type of the value held by a <a href="../result_handler/Success-class.html">Success</a>.
-<code>E</code> is the type of the error held by a <a href="../result_handler/Failure-class.html">Failure</a>.</p>
+<p><code>E</code> is the type of the error held by a <a href="../result_handler/Failure-class.html">Failure</a>.
+<code>T</code> is the type of the value held by a <a href="../result_handler/Success-class.html">Success</a>.</p>
 </section>
 
 
@@ -137,8 +137,8 @@
     <h2>Methods</h2>
     <dl class="callables">
         <dt id="bind" class="callable">
-  <span class="name"><a href="../result_handler/Result/bind.html">bind</a></span><span class="signature">&lt;<wbr><span class="type-parameter">R</span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="bind-param-transform"><span class="type-annotation"><a href="../result_handler/Result-class.html">Result</a><span class="signature">&lt;<wbr><span class="type-parameter">R</span>, <span class="type-parameter">E</span>&gt;</span></span> <span class="parameter-name">transform</span>(<span class="parameter" id="param-value"><span class="type-annotation">T</span> <span class="parameter-name">value</span></span>)</span>)
-    <span class="returntype parameter">&#8594; <a href="../result_handler/Result-class.html">Result</a><span class="signature">&lt;<wbr><span class="type-parameter">R</span>, <span class="type-parameter">E</span>&gt;</span></span>
+  <span class="name"><a href="../result_handler/Result/bind.html">bind</a></span><span class="signature">&lt;<wbr><span class="type-parameter">R</span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="bind-param-transform"><span class="type-annotation"><a href="../result_handler/Result-class.html">Result</a><span class="signature">&lt;<wbr><span class="type-parameter">E</span>, <span class="type-parameter">R</span>&gt;</span></span> <span class="parameter-name">transform</span>(<span class="parameter" id="param-value"><span class="type-annotation">T</span> <span class="parameter-name">value</span></span>)</span>)
+    <span class="returntype parameter">&#8594; <a href="../result_handler/Result-class.html">Result</a><span class="signature">&lt;<wbr><span class="type-parameter">E</span>, <span class="type-parameter">R</span>&gt;</span></span>
   </span>
   
 
@@ -152,8 +152,8 @@ If the result is a <a href="../result_handler/Failure-class.html">Failure</a>, t
 </dd>
 
         <dt id="flatMap" class="callable">
-  <span class="name"><a href="../result_handler/Result/flatMap.html">flatMap</a></span><span class="signature">&lt;<wbr><span class="type-parameter">R</span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="flatMap-param-transform"><span class="type-annotation"><a href="../result_handler/Result-class.html">Result</a><span class="signature">&lt;<wbr><span class="type-parameter">R</span>, <span class="type-parameter">E</span>&gt;</span></span> <span class="parameter-name">transform</span>(<span class="parameter" id="param-value"><span class="type-annotation">T</span> <span class="parameter-name">value</span></span>)</span>)
-    <span class="returntype parameter">&#8594; <a href="../result_handler/Result-class.html">Result</a><span class="signature">&lt;<wbr><span class="type-parameter">R</span>, <span class="type-parameter">E</span>&gt;</span></span>
+  <span class="name"><a href="../result_handler/Result/flatMap.html">flatMap</a></span><span class="signature">&lt;<wbr><span class="type-parameter">R</span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="flatMap-param-transform"><span class="type-annotation"><a href="../result_handler/Result-class.html">Result</a><span class="signature">&lt;<wbr><span class="type-parameter">E</span>, <span class="type-parameter">R</span>&gt;</span></span> <span class="parameter-name">transform</span>(<span class="parameter" id="param-value"><span class="type-annotation">T</span> <span class="parameter-name">value</span></span>)</span>)
+    <span class="returntype parameter">&#8594; <a href="../result_handler/Result-class.html">Result</a><span class="signature">&lt;<wbr><span class="type-parameter">E</span>, <span class="type-parameter">R</span>&gt;</span></span>
   </span>
   
 
@@ -196,7 +196,7 @@ on a <a href="../result_handler/Failure-class.html">Failure</a>'s error if the <
 
         <dt id="map" class="callable">
   <span class="name"><a href="../result_handler/Result/map.html">map</a></span><span class="signature">&lt;<wbr><span class="type-parameter">R</span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="map-param-transform"><span class="type-annotation">R</span> <span class="parameter-name">transform</span>(<span class="parameter" id="param-value"><span class="type-annotation">T</span> <span class="parameter-name">value</span></span>)</span>)
-    <span class="returntype parameter">&#8594; <a href="../result_handler/Result-class.html">Result</a><span class="signature">&lt;<wbr><span class="type-parameter">R</span>, <span class="type-parameter">E</span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="../result_handler/Result-class.html">Result</a><span class="signature">&lt;<wbr><span class="type-parameter">E</span>, <span class="type-parameter">R</span>&gt;</span></span>
   </span>
   
 
@@ -210,7 +210,7 @@ If the <a href="../result_handler/Result-class.html">Result</a> is a <a href="..
 
         <dt id="mapFailure" class="callable">
   <span class="name"><a href="../result_handler/Result/mapFailure.html">mapFailure</a></span><span class="signature">&lt;<wbr><span class="type-parameter">R</span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="mapFailure-param-transform"><span class="type-annotation">R</span> <span class="parameter-name">transform</span>(<span class="parameter" id="param-error"><span class="type-annotation">E</span> <span class="parameter-name">error</span></span>)</span>)
-    <span class="returntype parameter">&#8594; <a href="../result_handler/Result-class.html">Result</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>, <span class="type-parameter">R</span>&gt;</span></span>
+    <span class="returntype parameter">&#8594; <a href="../result_handler/Result-class.html">Result</a><span class="signature">&lt;<wbr><span class="type-parameter">R</span>, <span class="type-parameter">T</span>&gt;</span></span>
   </span>
   
 
@@ -301,7 +301,7 @@ If the <a href="../result_handler/Result-class.html">Result</a> is a <a href="..
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../index.html">result_handler</a></li>
     <li><a href="../result_handler/result_handler-library.html">result_handler</a></li>
-    <li class="self-crumb">Result<span class="signature">&lt;<wbr><span class="type-parameter">T</span>, <span class="type-parameter">E</span>&gt;</span> class</li>
+    <li class="self-crumb">Result<span class="signature">&lt;<wbr><span class="type-parameter">E</span>, <span class="type-parameter">T</span>&gt;</span> class</li>
 </ol>
 
     <h5>result_handler library</h5>
@@ -313,7 +313,7 @@ If the <a href="../result_handler/Result-class.html">Result</a> is a <a href="..
 <footer>
   <span class="no-break">
     result_handler
-      1.0.0
+      1.2.0
   </span>
   
 </footer>

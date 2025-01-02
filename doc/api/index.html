@@ -24,7 +24,7 @@
 <header id="title">
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
-    <li class="self-crumb">result_handler package</li>
+    <li><a href="https://mahmoud-saeed-mahmoud.github.io/result_handler/">result_handler package</a></li>
   </ol>
   <div class="self-name">result_handler</div>
   <form class="search navbar-right" role="search">
@@ -58,9 +58,9 @@
 </ul>
 <h2 id="usage">Usage</h2>
 <p>Here's how to use the library:</p>
-<pre class="language-dart"><code class="language-dart">import 'package:result_handling/result_handling.dart';
+<pre class="language-dart"><code class="language-dart">import 'package:result_handler/result_handler.dart';
 
-Future&lt;Result&lt;int, String&gt;&gt; fetchData() async {
+Future&lt;Result&lt;String, int&gt;&gt; fetchData() async {
   await Future.delayed(const Duration(seconds: 1)); // Simulate work
   if (DateTime.now().second % 2 == 0) {
     return Success(42); // Success case
@@ -108,7 +108,7 @@ void main() async {
   } catch(e) {
     print("Exception thrown : $e");
   }
-    final resultB = await fetchData();
+  final resultB = await fetchData();
   final bindResult = resultB.bind((data) =&gt; Success(data * 50));
   bindResult.when(
     success: (value) =&gt; print('Success bind: $value'),
@@ -117,20 +117,20 @@ void main() async {
 }
 </code></pre>
 <h2 id="api">API</h2>
-<h3 id="resultt-e-abstract-class"><code>Result&lt;T, E&gt;</code> (Abstract Class)</h3>
-<p>Represents the result of an operation, which can be either a <code>Success&lt;T, E&gt;</code> or a <code>Failure&lt;T, E&gt;</code>.</p>
+<h3 id="resulte-t-abstract-class"><code>Result&lt;E, T&gt;</code> (Abstract Class)</h3>
+<p>Represents the result of an operation, which can be either a <code>Success&lt;E, T&gt;</code> or a <code>Failure&lt;E, T&gt;</code>.</p>
 <ul>
-<li><code>bind&lt;R&gt;(Result&lt;R, E&gt; Function(T value) transform)</code>:  Binds a function to the <code>Result</code>.</li>
-<li><code>flatMap&lt;R&gt;(Result&lt;R, E&gt; Function(T value) transform)</code>: Similar to map but the transformation returns another Result.</li>
+<li><code>bind&lt;R&gt;(Result&lt;R, T&gt; Function(T value) transform)</code>:  Binds a function to the <code>Result</code>.</li>
+<li><code>flatMap&lt;R&gt;(Result&lt;R, T&gt; Function(T value) transform)</code>: Similar to map but the transformation returns another Result.</li>
 <li><code>getOrElse(T Function(E error) orElse)</code>: Returns the value if it's a <code>Success</code>, otherwise returns the result of the orElse callback.</li>
 <li><code>getOrThrow()</code>: Returns the value if it's a <code>Success</code>, otherwise throws the error.</li>
 <li><code>map&lt;R&gt;(R Function(T value) transform)</code>: Transforms the value inside a <code>Success</code>, otherwise does nothing.</li>
 <li><code>mapFailure&lt;R&gt;(R Function(E error) transform)</code>: Transforms the error inside a <code>Failure</code>, otherwise does nothing.</li>
 <li><code>when&lt;R&gt;({required R Function(T data) success, required R Function(E error) failure})</code>: Executes the <code>success</code> callback if it's a <code>Success</code> or <code>failure</code> if it's a <code>Failure</code>.</li>
 </ul>
-<h3 id="successt-e-class"><code>Success&lt;T, E&gt;</code> (Class)</h3>
+<h3 id="successe-t-class"><code>Success&lt;E, T&gt;</code> (Class)</h3>
 <p>Represents a successful result, holding a value of type <code>T</code>.</p>
-<h3 id="failuret-e-class"><code>Failure&lt;T, E&gt;</code> (Class)</h3>
+<h3 id="failuree-t-class"><code>Failure&lt;E, T&gt;</code> (Class)</h3>
 <p>Represents a failed result, holding an error of type <code>E</code>.</p>
 <h2 id="license">License</h2>
 <p>This library is licensed under the MIT License. See the <a href="LICENSE">LICENSE</a> file for more details.</p>
@@ -162,7 +162,7 @@ void main() async {
   </form>
 </header>
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
-    <li class="self-crumb">result_handler package</li>
+    <li><a href="https://mahmoud-saeed-mahmoud.github.io/result_handler/">result_handler package</a></li>
 </ol>
 
     <h5 class="hidden-xs"><span class="package-name">result_handler</span> <span class="package-kind">package</span></h5>
@@ -178,7 +178,7 @@ void main() async {
 <footer>
   <span class="no-break">
     result_handler
-      1.0.0
+      1.2.0
   </span>
   
 </footer>
