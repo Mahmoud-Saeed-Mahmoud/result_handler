@@ -74,7 +74,7 @@ void main() async {
 ///
 /// If the current second of the time is even, return a Success with the value 42.
 /// Otherwise, return a Failure with a message.
-Future<Result<int, String>> fetchData() async {
+Future<Result<String, int>> fetchData() async {
   await Future.delayed(const Duration(seconds: 1)); // Simulate work
   if (DateTime.now().second % 2 == 0) {
     return Success(42); // Success case
