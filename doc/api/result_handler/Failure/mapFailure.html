@@ -26,7 +26,7 @@
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">result_handler</a></li>
     <li><a href="../../result_handler/result_handler-library.html">result_handler.dart</a></li>
-    <li><a href="../../result_handler/Failure-class.html">Failure<span class="signature">&lt;<wbr><span class="type-parameter">T</span>, <span class="type-parameter">E</span>&gt;</span></a></li>
+    <li><a href="../../result_handler/Failure-class.html">Failure<span class="signature">&lt;<wbr><span class="type-parameter">E</span>, <span class="type-parameter">T</span>&gt;</span></a></li>
     <li class="self-crumb">mapFailure&lt;<wbr><span class="type-parameter">R</span>&gt; method</li>
   </ol>
   <div class="self-name">mapFailure</div>
@@ -62,7 +62,7 @@
         <li>@<a href="https://api.dart.dev/stable/3.6.0/dart-core/override-constant.html">override</a></li>
     </ol>
   </div>
-<span class="returntype"><a href="../../result_handler/Result-class.html">Result</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>, <span class="type-parameter">R</span>&gt;</span></span>
+<span class="returntype"><a href="../../result_handler/Result-class.html">Result</a><span class="signature">&lt;<wbr><span class="type-parameter">R</span>, <span class="type-parameter">T</span>&gt;</span></span>
 <span class="name ">mapFailure</span>&lt;<wbr><span class="type-parameter">R</span>&gt;(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="mapFailure-param-transform"><span class="type-annotation">R</span> <span class="parameter-name">transform</span>(<ol class="parameter-list single-line"> <li><span class="parameter" id="param-error"><span class="type-annotation">E</span> <span class="parameter-name">error</span></span></li>
 </ol>)</span></li>
 </ol>)
@@ -86,9 +86,9 @@ that call is returned as the result of this function.</p>
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">@override
-Result&lt;T, R&gt; mapFailure&lt;R&gt;(R Function(E error) transform) {
-  &#47;&#47; If the result is a failure, return a new failure with the transformed error.
-  &#47;&#47; Otherwise, return a new success with the same value.
+Result&lt;R, T&gt; mapFailure&lt;R&gt;(R Function(E error) transform) {
+  &#47;&#47;&#47; If the result is a failure, return a new failure with the transformed error.
+  &#47;&#47;&#47; Otherwise, return a new success with the same value.
   return Failure(transform(error));
 }</code></pre>
 </section>
@@ -105,7 +105,7 @@ Result&lt;T, R&gt; mapFailure&lt;R&gt;(R Function(E error) transform) {
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">result_handler</a></li>
     <li><a href="../../result_handler/result_handler-library.html">result_handler</a></li>
-    <li><a href="../../result_handler/Failure-class.html">Failure<span class="signature">&lt;<wbr><span class="type-parameter">T</span>, <span class="type-parameter">E</span>&gt;</span></a></li>
+    <li><a href="../../result_handler/Failure-class.html">Failure<span class="signature">&lt;<wbr><span class="type-parameter">E</span>, <span class="type-parameter">T</span>&gt;</span></a></li>
     <li class="self-crumb">mapFailure&lt;<wbr><span class="type-parameter">R</span>&gt; method</li>
 </ol>
 
@@ -118,7 +118,7 @@ Result&lt;T, R&gt; mapFailure&lt;R&gt;(R Function(E error) transform) {
 <footer>
   <span class="no-break">
     result_handler
-      1.0.0
+      1.2.0
   </span>
   
 </footer>

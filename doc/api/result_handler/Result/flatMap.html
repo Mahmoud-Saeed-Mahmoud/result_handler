@@ -26,7 +26,7 @@
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">result_handler</a></li>
     <li><a href="../../result_handler/result_handler-library.html">result_handler.dart</a></li>
-    <li><a href="../../result_handler/Result-class.html">Result<span class="signature">&lt;<wbr><span class="type-parameter">T</span>, <span class="type-parameter">E</span>&gt;</span></a></li>
+    <li><a href="../../result_handler/Result-class.html">Result<span class="signature">&lt;<wbr><span class="type-parameter">E</span>, <span class="type-parameter">T</span>&gt;</span></a></li>
     <li class="self-crumb">flatMap&lt;<wbr><span class="type-parameter">R</span>&gt; abstract method</li>
   </ol>
   <div class="self-name">flatMap</div>
@@ -57,8 +57,8 @@
 
     <section class="multi-line-signature">
       
-<span class="returntype"><a href="../../result_handler/Result-class.html">Result</a><span class="signature">&lt;<wbr><span class="type-parameter">R</span>, <span class="type-parameter">E</span>&gt;</span></span>
-<span class="name ">flatMap</span>&lt;<wbr><span class="type-parameter">R</span>&gt;(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="flatMap-param-transform"><span class="type-annotation"><a href="../../result_handler/Result-class.html">Result</a><span class="signature">&lt;<wbr><span class="type-parameter">R</span>, <span class="type-parameter">E</span>&gt;</span></span> <span class="parameter-name">transform</span>(<ol class="parameter-list single-line"> <li><span class="parameter" id="param-value"><span class="type-annotation">T</span> <span class="parameter-name">value</span></span></li>
+<span class="returntype"><a href="../../result_handler/Result-class.html">Result</a><span class="signature">&lt;<wbr><span class="type-parameter">E</span>, <span class="type-parameter">R</span>&gt;</span></span>
+<span class="name ">flatMap</span>&lt;<wbr><span class="type-parameter">R</span>&gt;(<wbr><ol class="parameter-list single-line"> <li><span class="parameter" id="flatMap-param-transform"><span class="type-annotation"><a href="../../result_handler/Result-class.html">Result</a><span class="signature">&lt;<wbr><span class="type-parameter">E</span>, <span class="type-parameter">R</span>&gt;</span></span> <span class="parameter-name">transform</span>(<ol class="parameter-list single-line"> <li><span class="parameter" id="param-value"><span class="type-annotation">T</span> <span class="parameter-name">value</span></span></li>
 </ol>)</span></li>
 </ol>)
 
@@ -78,7 +78,7 @@ returned without the transformation being applied.</p>
     
 <section class="summary source-code" id="source">
   <h2><span>Implementation</span></h2>
-  <pre class="language-dart"><code class="language-dart">Result&lt;R, E&gt; flatMap&lt;R&gt;(Result&lt;R, E&gt; Function(T value) transform);</code></pre>
+  <pre class="language-dart"><code class="language-dart">Result&lt;E, R&gt; flatMap&lt;R&gt;(Result&lt;E, R&gt; Function(T value) transform);</code></pre>
 </section>
 
 
@@ -93,7 +93,7 @@ returned without the transformation being applied.</p>
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">result_handler</a></li>
     <li><a href="../../result_handler/result_handler-library.html">result_handler</a></li>
-    <li><a href="../../result_handler/Result-class.html">Result<span class="signature">&lt;<wbr><span class="type-parameter">T</span>, <span class="type-parameter">E</span>&gt;</span></a></li>
+    <li><a href="../../result_handler/Result-class.html">Result<span class="signature">&lt;<wbr><span class="type-parameter">E</span>, <span class="type-parameter">T</span>&gt;</span></a></li>
     <li class="self-crumb">flatMap&lt;<wbr><span class="type-parameter">R</span>&gt; abstract method</li>
 </ol>
 
@@ -106,7 +106,7 @@ returned without the transformation being applied.</p>
 <footer>
   <span class="no-break">
     result_handler
-      1.0.0
+      1.2.0
   </span>
   
 </footer>
