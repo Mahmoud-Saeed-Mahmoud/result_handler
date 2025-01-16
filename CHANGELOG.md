@@ -37,3 +37,9 @@
 - **Updated Dart SDK Constraint:**
     - Extended SDK compatibility to support version 3.6.1
     - Updated constraint from '>=3.0.0 <=3.6.0' to '>=3.0.0 <=3.6.1'
+
+## 1.2.1
+
+- **Updated Dart SDK Constraint:**
+    - Extended SDK compatibility to support version 3.6.1
+    - Updated constraint from '>=3.0.0 <=4.0.0' to '>=3.0.0 <=4.0.0'
