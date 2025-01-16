@@ -1,12 +1,11 @@
 name: result_handler
 description: A simple and powerful library for handling results (successes and failures) in Dart, inspired by Either from functional programming libraries like dartz.
-version: 1.2.0
+version: 1.2.1
 repository: https://github.com/Mahmoud-Saeed-Mahmoud/result_handler
 homepage: https://mahmoud-saeed-mahmoud.github.io/result_handler/
 
 environment:
-  sdk: '>=3.0.0 <=3.6.0'
-
+  sdk: ">=3.0.0 <=3.6.1"
 
 dev_dependencies:
   lints: ^5.0.0
