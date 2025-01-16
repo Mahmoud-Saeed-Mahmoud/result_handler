@@ -32,6 +32,8 @@
         - Existing code utilizing the `Result` class will need to update their generic type parameters accordingly (e.g., `Result<int, String>` becomes `Result<String, int>`).
         - No functionality is changed other than type parameter order, so the code should work the same way after the fix, providing the types are updated correctly.
 
- ## 1.2.1
+## 1.2.1
 
-- **Updated Dart SDK**
+- **Updated Dart SDK Constraint:**
+    - Extended SDK compatibility to support version 3.6.1
+    - Updated constraint from '>=3.0.0 <=3.6.0' to '>=3.0.0 <=3.6.1'
