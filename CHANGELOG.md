@@ -31,3 +31,7 @@
     - **Migration:**
         - Existing code utilizing the `Result` class will need to update their generic type parameters accordingly (e.g., `Result<int, String>` becomes `Result<String, int>`).
         - No functionality is changed other than type parameter order, so the code should work the same way after the fix, providing the types are updated correctly.
+
+ ## 1.2.1
+
+- **Updated Dart SDK**
