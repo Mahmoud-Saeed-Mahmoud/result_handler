@@ -25,7 +25,7 @@
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">result_handler</a></li>
-    <li><a href="../../result_handler/result_handler-library.html">result_handler.dart</a></li>
+    <li><a href="../../result_handler/">result_handler.dart</a></li>
     <li><a href="../../result_handler/Result-class.html">Result<span class="signature">&lt;<wbr><span class="type-parameter">E</span>, <span class="type-parameter">T</span>&gt;</span></a></li>
     <li class="self-crumb">getOrThrow abstract method</li>
   </ol>
@@ -33,17 +33,14 @@
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
-  <div class="toggle" id="theme-button" title="Toggle brightness">
-    <label for="theme">
-      <input type="checkbox" id="theme" value="light-theme">
-      <span id="dark-theme-button" class="material-symbols-outlined">
-        dark_mode
-      </span>
-      <span id="light-theme-button" class="material-symbols-outlined">
-        light_mode
-      </span>
-    </label>
-  </div>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
 </header>
 <main>
 <div
@@ -66,7 +63,9 @@
     
 <section class="desc markdown">
   <p>Returns the value held by a <a href="../../result_handler/Success-class.html">Success</a>, or throws the error wrapped in an
-<code>Exception</code> if the <a href="../../result_handler/Result-class.html">Result</a> is a <a href="../../result_handler/Failure-class.html">Failure</a>.</p>
+<a href="https://api.dart.dev/stable/3.8.0/dart-core/Exception-class.html">Exception</a> if the <a href="../../result_handler/Result-class.html">Result</a> is a <a href="../../result_handler/Failure-class.html">Failure</a>.</p>
+<p>Use this when you expect a success and consider a failure an exceptional case.
+Returns the success value. Throws if this is a <a href="../../result_handler/Failure-class.html">Failure</a>.</p>
 </section>
 
 
@@ -87,7 +86,7 @@
 </header>
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">result_handler</a></li>
-    <li><a href="../../result_handler/result_handler-library.html">result_handler</a></li>
+    <li><a href="../../result_handler/">result_handler</a></li>
     <li><a href="../../result_handler/Result-class.html">Result<span class="signature">&lt;<wbr><span class="type-parameter">E</span>, <span class="type-parameter">T</span>&gt;</span></a></li>
     <li class="self-crumb">getOrThrow abstract method</li>
 </ol>
@@ -101,7 +100,7 @@
 <footer>
   <span class="no-break">
     result_handler
-      1.2.0
+      1.3.0
   </span>
   
 </footer>

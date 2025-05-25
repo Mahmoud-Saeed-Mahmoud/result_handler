@@ -25,7 +25,7 @@
   <span id="sidenav-left-toggle" class="material-symbols-outlined" role="button" tabindex="0">menu</span>
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../../index.html">result_handler</a></li>
-    <li><a href="../../result_handler/result_handler-library.html">result_handler.dart</a></li>
+    <li><a href="../../result_handler/">result_handler.dart</a></li>
     <li><a href="../../result_handler/Success-class.html">Success<span class="signature">&lt;<wbr><span class="type-parameter">E</span>, <span class="type-parameter">T</span>&gt;</span></a></li>
     <li class="self-crumb">getOrElse method</li>
   </ol>
@@ -33,17 +33,14 @@
   <form class="search navbar-right" role="search">
     <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
   </form>
-  <div class="toggle" id="theme-button" title="Toggle brightness">
-    <label for="theme">
-      <input type="checkbox" id="theme" value="light-theme">
-      <span id="dark-theme-button" class="material-symbols-outlined">
-        dark_mode
-      </span>
-      <span id="light-theme-button" class="material-symbols-outlined">
-        light_mode
-      </span>
-    </label>
-  </div>
+  <button class="toggle" id="theme-button" title="Toggle between light and dark mode" aria-label="Light and dark mode toggle">
+    <span id="dark-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      dark_mode
+    </span>
+    <span id="light-theme-button" class="material-symbols-outlined" aria-hidden="true">
+      light_mode
+    </span>
+  </button>
 </header>
 <main>
 <div
@@ -59,7 +56,7 @@
       
   <div>
     <ol class="annotation-list">
-        <li>@<a href="https://api.dart.dev/stable/3.6.0/dart-core/override-constant.html">override</a></li>
+        <li>@<a href="https://api.dart.dev/stable/3.8.0/dart-core/override-constant.html">override</a></li>
     </ol>
   </div>
 <span class="returntype">T</span>
@@ -72,9 +69,10 @@
     </section>
     
 <section class="desc markdown">
-  <p>Returns the value held by this <a href="../../result_handler/Success-class.html">Success</a>, or the result of executing <code>orElse</code>
-on the error of a <a href="../../result_handler/Failure-class.html">Failure</a> if the <a href="../../result_handler/Result-class.html">Result</a> is a <a href="../../result_handler/Failure-class.html">Failure</a>.</p>
-<p><code>orElse</code> is the function to run on failure, it should return a default value.</p>
+  <p>Returns the value held by a <a href="../../result_handler/Success-class.html">Success</a>, or the result of executing <code>orElse</code>
+on a <a href="../../result_handler/Failure-class.html">Failure</a>'s error if the <a href="../../result_handler/Result-class.html">Result</a> is a <a href="../../result_handler/Failure-class.html">Failure</a>.</p>
+<p><code>orElse</code> is the function to run on failure, it should return a default value of type <code>T</code>.
+Returns the success value or the result of <code>orElse</code>.</p>
 </section>
 
 
@@ -83,7 +81,7 @@ on the error of a <a href="../../result_handler/Failure-class.html">Failure</a> 
   <h2><span>Implementation</span></h2>
   <pre class="language-dart"><code class="language-dart">@override
 T getOrElse(T Function(E error) orElse) {
-  &#47;&#47;&#47; Since this is a success, return the value.
+  &#47;&#47; Since this is a success, return the value.
   return data;
 }</code></pre>
 </section>
@@ -99,7 +97,7 @@ T getOrElse(T Function(E error) orElse) {
 </header>
 <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
     <li><a href="../../index.html">result_handler</a></li>
-    <li><a href="../../result_handler/result_handler-library.html">result_handler</a></li>
+    <li><a href="../../result_handler/">result_handler</a></li>
     <li><a href="../../result_handler/Success-class.html">Success<span class="signature">&lt;<wbr><span class="type-parameter">E</span>, <span class="type-parameter">T</span>&gt;</span></a></li>
     <li class="self-crumb">getOrElse method</li>
 </ol>
@@ -113,7 +111,7 @@ T getOrElse(T Function(E error) orElse) {
 <footer>
   <span class="no-break">
     result_handler
-      1.2.0
+      1.3.0
   </span>
   
 </footer>
